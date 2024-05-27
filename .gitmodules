@@ -1,0 +1,3 @@
+[submodule "cti-stix-visualization"]
+	path = cti-stix-visualization
+	url = gh:oasis-open/cti-stix-visualization

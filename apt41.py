@@ -1,4 +1,4 @@
-
+#!/bin/env python3
 import stix2
 
 apt41_threat_actor = stix2.ThreatActor(

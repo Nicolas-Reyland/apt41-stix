@@ -1,0 +1,56 @@
+{
+    "type": "bundle",
+    "id": "bundle--67ec2f43-bf47-4054-bcbd-1cce23ba94d9",
+    "objects": [
+        {
+            "type": "threat-actor",
+            "spec_version": "2.1",
+            "id": "threat-actor--2fb70803-4e6f-463c-a25d-d53430b8503d",
+            "created": "2024-06-04T16:04:29.793796Z",
+            "modified": "2024-06-04T16:04:29.793796Z",
+            "name": "APT41",
+            "description": "APT41 is a threat group that researchers have assessed as Chinese state-sponsored espionage group that also conducts financially-motivated operations. Active since at least 2012, APT41 has been observed targeting healthcare, telecom, technology, and video game industries in 14 countries.",
+            "threat_actor_types": [
+                "crime-syndicate"
+            ],
+            "aliases": [
+                "Wicked Panda",
+                "Brass Typhoon",
+                "BARIUM"
+            ],
+            "roles": [
+                "agent",
+                "malware-author"
+            ],
+            "goals": [
+                "steal-intellectual-property",
+                "financial-gain",
+                "ransomware-attacks",
+                "cryptocurrency-mining"
+            ],
+            "sophistication": "expert",
+            "resource_level": "organization",
+            "primary_motivation": "personal-gain"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--0a1f76d4-c27f-483e-acbe-619e061a029b",
+            "created": "2024-06-04T16:04:29.793796Z",
+            "modified": "2024-06-04T16:04:29.793796Z",
+            "name": "APT41",
+            "description": "APT41 is the name of an organized threat actor crime-syndicate",
+            "identity_class": "orgnization"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--d2928599-5458-4b80-9a08-4351b505c89b",
+            "created": "2024-06-04T16:04:29.793796Z",
+            "modified": "2024-06-04T16:04:29.793796Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "threat-actor--2fb70803-4e6f-463c-a25d-d53430b8503d",
+            "target_ref": "identity--0a1f76d4-c27f-483e-acbe-619e061a029b"
+        }
+    ]
+}

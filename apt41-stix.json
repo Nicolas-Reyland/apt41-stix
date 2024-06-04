@@ -1,13 +1,13 @@
 {
     "type": "bundle",
-    "id": "bundle--67ec2f43-bf47-4054-bcbd-1cce23ba94d9",
+    "id": "bundle--c1830b6d-543e-495c-9bd8-6ac2ce183cd6",
     "objects": [
         {
             "type": "threat-actor",
             "spec_version": "2.1",
-            "id": "threat-actor--2fb70803-4e6f-463c-a25d-d53430b8503d",
-            "created": "2024-06-04T16:04:29.793796Z",
-            "modified": "2024-06-04T16:04:29.793796Z",
+            "id": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "created": "2024-06-04T16:11:05.974518Z",
+            "modified": "2024-06-04T16:11:05.974518Z",
             "name": "APT41",
             "description": "APT41 is a threat group that researchers have assessed as Chinese state-sponsored espionage group that also conducts financially-motivated operations. Active since at least 2012, APT41 has been observed targeting healthcare, telecom, technology, and video game industries in 14 countries.",
             "threat_actor_types": [
@@ -35,22 +35,331 @@
         {
             "type": "identity",
             "spec_version": "2.1",
-            "id": "identity--0a1f76d4-c27f-483e-acbe-619e061a029b",
-            "created": "2024-06-04T16:04:29.793796Z",
-            "modified": "2024-06-04T16:04:29.793796Z",
-            "name": "APT41",
-            "description": "APT41 is the name of an organized threat actor crime-syndicate",
-            "identity_class": "orgnization"
+            "id": "identity--90e0face-ec91-41e5-aa47-ed34dfffe324",
+            "created": "2024-06-04T16:11:05.974518Z",
+            "modified": "2024-06-04T16:11:05.974518Z",
+            "name": "CCP",
+            "description": "The Chinese Communist Party",
+            "identity_class": "organization"
         },
         {
             "type": "relationship",
             "spec_version": "2.1",
-            "id": "relationship--d2928599-5458-4b80-9a08-4351b505c89b",
-            "created": "2024-06-04T16:04:29.793796Z",
-            "modified": "2024-06-04T16:04:29.793796Z",
+            "id": "relationship--824e8969-54c3-4bc7-8bf1-b9c28c9dce71",
+            "created": "2024-06-04T16:11:05.974518Z",
+            "modified": "2024-06-04T16:11:05.974518Z",
             "relationship_type": "attributed-to",
-            "source_ref": "threat-actor--2fb70803-4e6f-463c-a25d-d53430b8503d",
-            "target_ref": "identity--0a1f76d4-c27f-483e-acbe-619e061a029b"
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "identity--90e0face-ec91-41e5-aa47-ed34dfffe324"
+        },
+        {
+            "type": "location",
+            "spec_version": "2.1",
+            "id": "location--62cd63f4-1319-4aaf-a7d1-0c361a3bfc95",
+            "created": "2024-06-04T16:11:05.974518Z",
+            "modified": "2024-06-04T16:11:05.974518Z",
+            "name": "China",
+            "country": "CN"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--a499feeb-5bea-4643-b445-1e13c103369b",
+            "created": "2024-06-04T16:11:05.990145Z",
+            "modified": "2024-06-04T16:11:05.990145Z",
+            "relationship_type": "located-at",
+            "source_ref": "identity--90e0face-ec91-41e5-aa47-ed34dfffe324",
+            "target_ref": "location--62cd63f4-1319-4aaf-a7d1-0c361a3bfc95"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--2668a240-e515-4ac2-aec0-7c14d66484e5",
+            "created": "2024-06-04T16:11:05.990145Z",
+            "modified": "2024-06-04T16:11:05.990145Z",
+            "relationship_type": "located-at",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "location--62cd63f4-1319-4aaf-a7d1-0c361a3bfc95"
+        },
+        {
+            "type": "intrusion-set",
+            "spec_version": "2.1",
+            "id": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "created": "2024-06-04T16:11:05.991462Z",
+            "modified": "2024-06-04T16:11:05.991462Z",
+            "name": "APT41",
+            "description": "APT41 is a threat group that has conducted Chinese state-sponsored cyber espionage activity and financially motivated intrusions.",
+            "aliases": [
+                "Wicked Panda",
+                "Brass Typhoon",
+                "BARIUM"
+            ],
+            "first_seen": "2012-01-01T00:00:00Z",
+            "last_seen": "2024-04-03T00:00:00Z",
+            "resource_level": "organization",
+            "primary_motivation": "personal-gain"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--13c2760c-639b-4a1c-9af9-0abf47e69a21",
+            "created": "2024-06-04T16:11:05.992476Z",
+            "modified": "2024-06-04T16:11:05.992476Z",
+            "relationship_type": "attributed-to",
+            "source_ref": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "target_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634"
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--7df5abea-e421-4bc1-b8e5-7914b0d0a093",
+            "created": "2024-06-04T16:11:05.992476Z",
+            "modified": "2024-06-04T16:11:05.992476Z",
+            "name": "Western World",
+            "description": "The western world",
+            "identity_class": "class"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--1439734b-0645-4858-9ad1-b82930c4a5b3",
+            "created": "2024-06-04T16:11:05.993535Z",
+            "modified": "2024-06-04T16:11:05.993535Z",
+            "relationship_type": "targets",
+            "source_ref": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "target_ref": "identity--7df5abea-e421-4bc1-b8e5-7914b0d0a093"
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--3793c27d-ee55-43f4-a465-f6d264735017",
+            "created": "2024-06-04T16:11:05.993535Z",
+            "modified": "2024-06-04T16:11:05.993535Z",
+            "name": "Access Token Manipulation",
+            "description": "Adversaries may modify access tokens to operate under a different user or system security context to \nperform actions and bypass access controls. Windows uses access tokens to determine the ownership of a \nrunning process. A user can manipulate access tokens to make a running process appear as though it is the \nchild of a different process or belongs to someone other than the user that started the process. When \nthis occurs, the process also takes on the security context associated with the new token.\n\nAn adversary can use built-in Windows API functions to copy access tokens from existing processes; this is known as \ntoken stealing. These token can then be applied to an existing process (i.e. Token Impersonation/Theft) or used to \nspawn a new process (i.e. Create Process with Token). An adversary must already be in a privileged user context (i.e. \nadministrator) to steal a token. However, adversaries commonly use token stealing to elevate their security context \nfrom the administrator level to the SYSTEM level. An adversary can then use a token to authenticate to a remote \nsystem as the account for that token if the account has appropriate permissions on the remote system.\n\nAny standard user can use the runas command, and the Windows API functions, to create impersonation tokens; it does \nnot require access to an administrator account. There are also other mechanisms, such as Active Directory fields, \nthat can be used to modify access tokens.",
+            "external_references": [
+                {
+                    "source_name": "organization",
+                    "description": "MITRE reference for Access Token Manipulation",
+                    "url": "https://attack.mitre.org/techniques/T1134/"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--b616d84b-d62e-46b2-a18b-c5e1b48e29d4",
+            "created": "2024-06-04T16:11:05.994585Z",
+            "modified": "2024-06-04T16:11:05.994585Z",
+            "name": "Hijack Execution Flow",
+            "description": "Adversaries may execute their own malicious payloads by hijacking the way operating systems run \nprograms. Hijacking execution flow can be for the purposes of persistence, since this hijacked execution \nmay reoccur over time. Adversaries may also use these mechanisms to elevate privileges or evade defenses, \nsuch as application control or other restrictions on execution.\n\nThere are many ways an adversary may hijack the flow of execution, including by manipulating how the operating system \nlocates programs to be executed. How the operating system locates libraries to be used by a program can also be \nintercepted. Locations where the operating system looks for programs/resources, such as file directories and in the \ncase of Windows the Registry, could also be poisoned to include malicious payloads.",
+            "external_references": [
+                {
+                    "source_name": "organization",
+                    "description": "MITRE reference for Hijack Execution Flow",
+                    "url": "https://attack.mitre.org/techniques/T1574/"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--985f1e16-a329-4f2c-b093-97e4cf5c2e1a",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "name": "Data Obfuscation: Protocol Impersonation",
+            "description": "Adversaries may impersonate legitimate protocols or web service traffic to disguise command and \ncontrol activity and thwart analysis efforts. By impersonating legitimate protocols or web services, \nadversaries can make their command and control traffic blend in with legitimate network traffic.\n\nAdversaries may impersonate a fake SSL/TLS handshake to make it look like subsequent traffic is SSL/TLS encrypted, \npotentially interfering with some security tooling, or to make the traffic look like it is related with a trusted \nentity.",
+            "external_references": [
+                {
+                    "source_name": "organization",
+                    "description": "MITRE reference for Data Obfuscation: Protocol Impersonation",
+                    "url": "https://attack.mitre.org/techniques/T1001/003/"
+                }
+            ]
+        },
+        {
+            "type": "attack-pattern",
+            "spec_version": "2.1",
+            "id": "attack-pattern--e12711ca-2294-4836-9ae8-ea87e5af39d2",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "name": "Phishing",
+            "description": "Adversaries may send phishing messages to gain access to victim systems. All forms of phishing are \nelectronically delivered social engineering. Phishing can be targeted, known as spearphishing. In \nspearphishing, a specific individual, company, or industry will be targeted by the adversary. More \ngenerally, adversaries can conduct non-targeted phishing, such as in mass malware spam campaigns.\n\nAdversaries may send victims emails containing malicious attachments or links, typically to execute malicious code on \nvictim systems. Phishing may also be conducted via third-party services, like social media platforms. Phishing may \nalso involve social engineering techniques, such as posing as a trusted source, as well as evasive techniques such as \nremoving or manipulating emails or metadata/headers from compromised accounts being abused to send messages (e.g., \nEmail Hiding Rules). Another way to accomplish this is by forging or spoofing the identity of the sender \nwhich can be used to fool both the human recipient as well as automated security tools.\n\nVictims may also receive phishing messages that instruct them to call a phone number where they are directed to visit \na malicious URL, download malware, or install adversary-accessible remote management tools onto their computer \n(i.e., User Execution).",
+            "external_references": [
+                {
+                    "source_name": "organization",
+                    "description": "MITRE reference for Phishing",
+                    "url": "https://attack.mitre.org/techniques/T1566/"
+                }
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--74e178bd-ceac-48ca-b477-241aaad23002",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "target_ref": "attack-pattern--3793c27d-ee55-43f4-a465-f6d264735017"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--89ce6460-529f-46c2-a7dd-d0126b9f8562",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "attack-pattern--3793c27d-ee55-43f4-a465-f6d264735017"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--9f0c21dd-49ce-4dd2-b1ff-af532e1c1798",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "target_ref": "attack-pattern--b616d84b-d62e-46b2-a18b-c5e1b48e29d4"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--610a1aba-a248-4106-adb7-2ebbb4e797d2",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "attack-pattern--b616d84b-d62e-46b2-a18b-c5e1b48e29d4"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--91696138-748e-4d91-84f4-abcbd1726496",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "target_ref": "attack-pattern--985f1e16-a329-4f2c-b093-97e4cf5c2e1a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--86e5a5c5-c4cb-483b-a493-71cee1febc90",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "attack-pattern--985f1e16-a329-4f2c-b093-97e4cf5c2e1a"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--59210e9a-a92d-4913-bff2-82fb29a2f39c",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "intrusion-set--1f93b535-4661-49da-b4ad-6cbcbbb1d2fa",
+            "target_ref": "attack-pattern--e12711ca-2294-4836-9ae8-ea87e5af39d2"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--6155dfe4-385a-4242-8118-019c09a416b0",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "attack-pattern--e12711ca-2294-4836-9ae8-ea87e5af39d2"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--44a2101d-dc1c-4dfe-a3ba-e624be44e9a8",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "name": "ASPXSpy",
+            "description": "ASPXSpy is a Web shell. It has been modified by Threat Group-3390 actors to create the ASPXTool version.",
+            "malware_types": [
+                "backdoor",
+                "webshell"
+            ],
+            "is_family": false,
+            "capabilities": [
+                "accesses-remote-machines",
+                "controls-local-machine"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--3bedc37e-259b-4035-96d0-1f041295e744",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "name": "BLACKCOFFEE",
+            "description": "BLACKCOFFEE is malware that has been used by several Chinese groups since at least 2013.",
+            "malware_types": [
+                "backdoor"
+            ],
+            "is_family": false,
+            "capabilities": [
+                "cleans-traces-of-infection",
+                "communicates-with-c2",
+                "determines-c2-server",
+                "controls-local-machine"
+            ]
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--9b051594-8829-4619-9687-8ed4ea063f69",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "name": "gh0st RAT",
+            "description": "gh0st RAT is a remote access tool (RAT). The source code is public and it has been used by multiple groups.",
+            "malware_types": [
+                "backdoor"
+            ],
+            "is_family": false,
+            "capabilities": [
+                "captures-input-peripherals",
+                "captures-system-state-data",
+                "cleans-traces-of-infection",
+                "communicates-with-c2",
+                "controls-local-machine",
+                "persists-after-system-reboot"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--638c2924-7911-4912-8d4b-28774d720763",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "malware--44a2101d-dc1c-4dfe-a3ba-e624be44e9a8"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--5417e25a-c24c-426c-ac2c-f24251be0c3c",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "malware--3bedc37e-259b-4035-96d0-1f041295e744"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--03b51fde-8ac3-4155-8409-3d54449839b6",
+            "created": "2024-06-04T16:11:05.99564Z",
+            "modified": "2024-06-04T16:11:05.99564Z",
+            "relationship_type": "uses",
+            "source_ref": "threat-actor--4ce732df-31fb-4002-a5d2-dbe664945634",
+            "target_ref": "malware--9b051594-8829-4619-9687-8ed4ea063f69"
         }
     ]
 }
